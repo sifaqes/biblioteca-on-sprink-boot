@@ -1,0 +1,9 @@
+/home/gustavo/tion/biblioteca/src/main/java/es/ua/biblioteca/model/Book.java
+/home/gustavo/tion/biblioteca/src/main/java/es/ua/biblioteca/controller/ControllerTM.java
+/home/gustavo/tion/biblioteca/src/main/java/es/ua/biblioteca/config/SecurityConfiguration.java
+/home/gustavo/tion/biblioteca/src/main/java/es/ua/biblioteca/BibliotecaApplication.java
+/home/gustavo/tion/biblioteca/src/main/java/es/ua/biblioteca/repository/BookRepository.java
+/home/gustavo/tion/biblioteca/src/main/java/es/ua/biblioteca/util/GeneratePdfReport.java
+/home/gustavo/tion/biblioteca/src/main/java/es/ua/biblioteca/service/IBookService.java
+/home/gustavo/tion/biblioteca/src/main/java/es/ua/biblioteca/controller/MyController.java
+/home/gustavo/tion/biblioteca/src/main/java/es/ua/biblioteca/service/BookService.java

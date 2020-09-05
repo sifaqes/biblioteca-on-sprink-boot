@@ -1,0 +1,9 @@
+es/ua/biblioteca/repository/BookRepository.class
+es/ua/biblioteca/service/IBookService.class
+es/ua/biblioteca/config/SecurityConfiguration.class
+es/ua/biblioteca/controller/ControllerTM.class
+es/ua/biblioteca/util/GeneratePdfReport.class
+es/ua/biblioteca/BibliotecaApplication.class
+es/ua/biblioteca/controller/MyController.class
+es/ua/biblioteca/service/BookService.class
+es/ua/biblioteca/model/Book.class
