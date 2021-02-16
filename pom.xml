@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>es.ua</groupId>
-	<artifactId>biblioteca</artifactId>
+	<artifactId>biblioteca-springboot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>biblioteca</name>
+	<name>biblioteca-springboot</name>
 	<description>Demo project for Spring Boot library</description>
 
 	<properties>
@@ -31,10 +31,6 @@
 	      <groupId>org.springframework.boot</groupId>
 	      <artifactId>spring-boot-starter-thymeleaf</artifactId>
 	    </dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
 		<dependency>
             <groupId>com.lowagie</groupId>
             <artifactId>itext</artifactId>
