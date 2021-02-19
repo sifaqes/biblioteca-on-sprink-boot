@@ -8,13 +8,13 @@
         <th>Autor</th>
       </tr>
       <tr th:each="book : ${libros}">
-        <td th:text="${book.title}">Onions</td>
-        <td th:text="${book.author}">2.41</td>
+        <td th:text="${book.title}">titulo</td>
+        <td th:text="${book.author}">autor</td>
       </tr>
     </table>
   
     <p>
-      <a href="../home.html" th:href="@{/}">Return to home</a>
+      <a href="/index.html" th:href="@{/}">Home</a>
     </p>
   </body>
 </html>

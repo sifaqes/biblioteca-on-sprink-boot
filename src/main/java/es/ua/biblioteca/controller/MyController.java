@@ -73,9 +73,9 @@ public class MyController {
             produces = MediaType.APPLICATION_PDF_VALUE)
     public ResponseEntity<InputStreamResource> booksReport() {
 
-        var cities = (List<Book>) bookService.findAll();
+        var books = (List<Book>) bookService.findAll();
 
-        ByteArrayInputStream bis = GeneratePdfReport.booksReport(cities);
+        ByteArrayInputStream bis = GeneratePdfReport.booksReport(books);
 
         var headers = new HttpHeaders();
         headers.add("Content-Disposition", "inline; filename=booksreport.pdf");

@@ -27,11 +27,11 @@ public class ControllerTM {
 		return "biblioteca";
 	}
 	
-	@RequestMapping("/hola")
+	@RequestMapping("/")
 	public String hola(Model modelo) {
 
-		modelo.addAttribute("mensaje", "Hola Thymeleaf");
-		return "hola";
+		modelo.addAttribute("mensaje", "Ejemplo biblioteca en Spring Boot");
+		return "index";
 	}
 	
 	@RequestMapping("/createBook")
