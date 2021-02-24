@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import es.ua.biblioteca.model.Book;
 import es.ua.biblioteca.service.IBookService;
@@ -38,6 +39,13 @@ public class ControllerTM {
 	public String createBook(Model model) {
 		model.addAttribute("book", new Book());
 	    return "form";
+	}
+	
+	@RequestMapping("/searchBook")
+	public String searchBook(@RequestParam(value = "texto", required = false) String texto, Model model) {
+		//model.addAttribute("book", new Book());
+		
+	    return "searchForm";
 	}
 	
 	@PostMapping("/createBook")

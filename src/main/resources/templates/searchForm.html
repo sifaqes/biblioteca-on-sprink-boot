@@ -1,0 +1,9 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+	<h1>Search Form</h1>
+    <form action="#" th:action="@{/searchBook}" method="get">
+    	<p>Título: <input type="text" th:name="texto" /></p>
+        <p><input type="submit" value="Buscar" /> <input type="reset" value="Reset" /></p>
+    </form>
+</body>
+</html>
