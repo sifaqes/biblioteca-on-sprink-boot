@@ -49,4 +49,9 @@ public class BookService implements IBookService {
 		}else
 			return "No id provided for the book"; 
 	}
+	
+	@Override
+	public List<Book> search(String title) {
+		return repository.searchTitle(title);
+	}
 }

@@ -43,8 +43,9 @@ public class ControllerTM {
 	
 	@RequestMapping("/searchBook")
 	public String searchBook(@RequestParam(value = "texto", required = false) String texto, Model model) {
-		//model.addAttribute("book", new Book());
+		
 		// añadir servicio de busqueda llamada y logica para mostrar los resultados en el formulario
+		model.addAttribute("libros", bookService.search(texto));
 		
 	    return "searchForm";
 	}
