@@ -17,15 +17,16 @@ public class SecurityConfig {
 
     @Bean
     public InMemoryUserDetailsManager userDetailsService(PasswordEncoder passwordEncoder) {
-        UserDetails user = User.withUsername("user")
-            .password(passwordEncoder.encode("password"))
+        UserDetails user = User.withUsername("kiosk2")
+            .password(passwordEncoder.encode("010301"))
             .roles("USER")
             .build();
 
-        UserDetails admin = User.withUsername("admin")
-            .password(passwordEncoder.encode("admin"))
-            .roles("USER", "ADMIN")
+        UserDetails admin = User.withUsername("kiosk")
+            .password(passwordEncoder.encode("010301"))
+            .roles("USER", "ADMIN", "SUPER")
             .build();
+        
 
         return new InMemoryUserDetailsManager(user, admin);
     }

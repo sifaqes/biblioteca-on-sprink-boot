@@ -22,9 +22,11 @@ public class Book {
     public Book() {
     }
     
-    public Book(String title, String author) {
+    public Book(long id, String title, String author) {
+    	this.id = id;
         this.title = title;
         this.author = author;
+        
     }
 
     public Book(Long id, String title, String author) {
