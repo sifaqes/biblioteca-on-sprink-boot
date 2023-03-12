@@ -1,20 +1,79 @@
 <html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Biblioteca Spring boot</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+</head>
+
 <body>
-	<h1>Search Form</h1>
-    <form action="#" th:action="@{/searchBook}" method="get">
-    	<p>Título: <input type="text" th:name="texto" /></p>
-        <p><input type="submit" value="Buscar" /> <input type="reset" value="Reset" /></p>
-    </form>
-    
-    <table>
-      <tr>
-        <th>Título</th>
-        <th>Autor</th>
-      </tr>
-      <tr th:each="book : ${libros}">
-        <td th:text="${book.title}">titulo</td>
-        <td th:text="${book.author}">autor</td>
-      </tr>
-    </table>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" th:text=${mensaje} href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/createBook">Crear libro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/libros">Recuperar libros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/searchForm">Buscar libros libros</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <h1>Search Form</h1>
+        <form action="#" th:action="@{/searchBook}" method="get">
+            <p>Título: <input type="text" th:name="texto" /></p>
+            <p><input type="submit" value="Buscar" /> <input type="reset" value="Reset" /></p>
+        </form>
+
+        <table>
+            <tr>
+                <th>Ref</th>
+                <th>Título</th>
+                <th>Autor</th>
+            </tr>
+            <tr th:each="book : ${libros}">
+                <td th:text="${book.id}">Ref</td>
+                <td th:text="${book.title}">titulo</td>
+                <td th:text="${book.author}">autor</td>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <footer class="bg-dark text-light py-3 fixed-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2023 Todos los derechos reservados</p>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#">Facebook</a></li>
+                        <li class="list-inline-item"><a href="#">Twitter</a></li>
+                        <li class="list-inline-item"><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
