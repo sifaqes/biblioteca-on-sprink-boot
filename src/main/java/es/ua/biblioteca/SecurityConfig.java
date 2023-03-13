@@ -23,8 +23,8 @@ public class SecurityConfig {
             .roles("USER")
             .build();
 
-        UserDetails admin = User.withUsername("0000")
-            .password(passwordEncoder.encode("0000"))
+        UserDetails admin = User.withUsername("admin")
+            .password(passwordEncoder.encode("admin"))
             .roles("USER", "ADMIN", "SUPER")
             .build();
         
@@ -38,14 +38,15 @@ public class SecurityConfig {
         	
             .anyRequest().authenticated()
             .and()
-//            .formLogin()
-//            	.loginPage("/login")
-//            	.usernameParameter("email")
-//            	.permitAll()
-//            .and()
+            .formLogin()
+            	.loginPage("/login")
+            	.usernameParameter("email")
+            	.passwordParameter("password")
+            	.permitAll()
+            .and()
             .httpBasic()
-//            .and()
-//            .logout().permitAll()
+            .and()
+            .logout().permitAll()
             ;
         	
         
