@@ -21,6 +21,11 @@
                 Usuario o contraseña incorrectos. [[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]
             </div>
         </div>
+        <div th:if="${param.logout}">
+            <div class="alert alert-success" role="alert">
+                Has cerrado sesión correctamente.
+            </div>
+        </div>
         <form th:action="@{/login}" method="post" style="max-width: 350px; margin: 0 auto;">
             <div class="border border-secondary p-3 rounded">
                 <p>Iniciar a tu cuenta</p>
@@ -29,6 +34,10 @@
                 </p>
                 <p>
                     <input type="password" name="password" class="form-control" placeholder="admin" required />
+                </p>
+                <p>
+                    <input type="checkbox" id="remember-me" name="remember-me" />
+                    <label for="remember-me">Remember me</label>
                 </p>
                 <p>
                     <input type="submit" name="" value="Login" class="btn btn-primary">
