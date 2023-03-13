@@ -11,7 +11,7 @@ import es.ua.biblioteca.model.Book;
 
 @Repository
 public interface BookRepository extends CrudRepository<Book, Long> {
-	
+
 	@Query("select b from Book b Where b.title like %:title%")
 	List<Book> searchTitle(@Param("title") String title);
 }

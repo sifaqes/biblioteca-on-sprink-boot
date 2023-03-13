@@ -1,5 +1,6 @@
 package es.ua.biblioteca;
 
+import org.aspectj.weaver.ast.And;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -17,13 +18,13 @@ public class SecurityConfig {
 
     @Bean
     public InMemoryUserDetailsManager userDetailsService(PasswordEncoder passwordEncoder) {
-        UserDetails user = User.withUsername("kiosk")
+        UserDetails user = User.withUsername("0103")
             .password(passwordEncoder.encode("0103"))
             .roles("USER")
             .build();
 
-        UserDetails admin = User.withUsername("admin")
-            .password(passwordEncoder.encode("admin"))
+        UserDetails admin = User.withUsername("0000")
+            .password(passwordEncoder.encode("0000"))
             .roles("USER", "ADMIN", "SUPER")
             .build();
         
@@ -34,10 +35,20 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-            .anyRequest()
-            .authenticated()
+        	
+            .anyRequest().authenticated()
             .and()
-            .httpBasic();
+//            .formLogin()
+//            	.loginPage("/login")
+//            	.usernameParameter("email")
+//            	.permitAll()
+//            .and()
+            .httpBasic()
+//            .and()
+//            .logout().permitAll()
+            ;
+        	
+        
         return http.build();
     }
 

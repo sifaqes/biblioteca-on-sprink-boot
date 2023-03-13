@@ -18,21 +18,35 @@ public class Book {
     private String title;
     
     private String author;
+    
+    private String disc;
+    
+    private String refe;
+    
+    private String impr;
 
     public Book() {
     }
     
-    public Book(long id, String title, String author) {
+    public Book(long id, String title, String author, String disc, String refe, String impr ) {
     	this.id = id;
         this.title = title;
         this.author = author;
+        // new Elements
+        this.disc = disc;
+        this.refe = refe;
+        this.impr = impr;
         
     }
 
-    public Book(Long id, String title, String author) {
+    public Book(Long id, String title, String author, String disc, String refe, String impr ) {
     	this.id = id;
         this.title = title;
         this.author = author;
+        // new Elements
+        this.disc = disc;
+        this.refe = refe;
+        this.impr = impr;
     }
 
     public Long getId() {
@@ -61,6 +75,10 @@ public class Book {
         if (!Objects.equals(this.author, other.author)) {
             return false;
         }
+        // New Eliments
+        if (!Objects.equals(this.refe, other.refe)) {
+            return false;
+        }
         return Objects.equals(this.id, other.id);
     }
 
@@ -70,7 +88,8 @@ public class Book {
         var builder = new StringBuilder();
         builder.append("Book{id=").append(id).append(", title=")
                 .append(title).append(", author=")
-                .append(author).append("}");
+                .append(author).append(",disc=").append("disc").append(", refe=")
+                .append("refe").append(", impr=").append("ampr").append("}");
 
         return builder.toString();
     }
@@ -91,5 +110,29 @@ public class Book {
 		this.author = author;
 	}
     
-    
+	
+	// new Eliments
+	public void setDisc(String disc) {
+		this.disc = disc;
+	}
+	
+	public String getDisc() {
+		return disc;
+	}
+	
+	public void setRefe(String refe) {
+		this.refe = refe;
+	}
+	
+	public String getRefe() {
+		return refe;
+	}
+	
+	public void setImpr(String impr) {
+		this.impr = impr;
+	}
+	
+	public String getImpr() {
+		return impr;
+	}
 }
