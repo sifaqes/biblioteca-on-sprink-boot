@@ -23,7 +23,7 @@ public class Book {
     
     private String refe;
     
-    private String impr;
+
 
     public Book() {
     }
@@ -35,7 +35,7 @@ public class Book {
         // new Elements
         this.disc = disc;
         this.refe = refe;
-        this.impr = impr;
+
         
     }
 
@@ -46,7 +46,7 @@ public class Book {
         // new Elements
         this.disc = disc;
         this.refe = refe;
-        this.impr = impr;
+
     }
 
     public Long getId() {
@@ -88,8 +88,8 @@ public class Book {
         var builder = new StringBuilder();
         builder.append("Book{id=").append(id).append(", title=")
                 .append(title).append(", author=")
-                .append(author).append(",disc=").append("disc").append(", refe=")
-                .append("refe").append(", impr=").append("ampr").append("}");
+                .append(author).append(", disc=").append("disc").append(", refe=")
+                .append("refe").append("}");
 
         return builder.toString();
     }
@@ -128,11 +128,4 @@ public class Book {
 		return refe;
 	}
 	
-	public void setImpr(String impr) {
-		this.impr = impr;
-	}
-	
-	public String getImpr() {
-		return impr;
-	}
 }

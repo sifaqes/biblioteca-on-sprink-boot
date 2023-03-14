@@ -56,22 +56,22 @@ public class SecurityConfig {
             	
             .and()
             //falta button html
-            .logout()
-    	        .logoutSuccessHandler((LogoutSuccessHandler) new LogoutSuccessHandler() {
-    	         	
-				@Override
-				public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response,
-						org.springframework.security.core.Authentication authentication)
-						throws IOException, ServletException {
-					
-					System.out.println("El usario " + authentication.getName() + " ha cerrado la session.");
-					UrlPathHelper helper = new UrlPathHelper();
-					String contex = helper.getContextPath(request);
-					response.sendRedirect(contex + "/login");
-					
-				}
-    	            })
-            .and()
+//            .logout()
+//    	        .logoutSuccessHandler((LogoutSuccessHandler) new LogoutSuccessHandler() {
+//    	         	
+//				@Override
+//				public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response,
+//						org.springframework.security.core.Authentication authentication)
+//						throws IOException, ServletException {
+//					
+//					System.out.println("El usario " + authentication.getName() + " ha cerrado la session.");
+//					UrlPathHelper helper = new UrlPathHelper();
+//					String contex = helper.getContextPath(request);
+//					response.sendRedirect(contex + "/login");
+//					
+//				}
+//    	            })
+//            .and()
             .rememberMe().tokenRepository(null)
             .and()
             .httpBasic()
